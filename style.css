@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&family=Shantell+Sans:ital,wght@1,300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
+nav {
+    background-image: linear-gradient(to right, rgb(232, 29, 184) 28%, #6F00FF);
+    position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  overflow: hidden;
+  z-index: 999;
+}
+main{
+    margin-top: 4rem;
+}
+.nav_container {
+    display: flex;
+    padding: 0.8rem 1.8rem;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+}
+
+.menu_bar>img {
+    width: 70px;
+    aspect-ratio: 2/1;
+}
+
+.nav_container i {
+    font-size: 1.3rem;
+    color: white;
+
+}
+
+.nav_container i:nth-child(3) {
+    color: blue;
+    background-color: white;
+    padding: 0.3rem 0.55rem;
+    border-radius: 4px;
+}
+
+.title h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 1.5rem;
+    background: #f2f4f6;
+}
+
+.item_container {
+    margin-top: 3rem;
+}
+
+.items {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.item {
+    background: #f2f4f6;
+    padding: 1rem;
+    /* filter: brightness(85%); */
+    width: 500px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    align-items: center;
+    gap: 1.2rem;
+    font-family: 'Shantell Sans', cursive;
+
+}
+
+div.item {
+    flex: 1 1 33%;
+    min-width: 80px;
+}
+
+.item_circle {
+    width: 90px;
+    height: 90px;
+    background-color: #6699CC;
+    border-radius: 50%;
+
+}
+
+.item_circle img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    padding: 1.2rem;
+}
+
+.menu {
+    display: none;
+}
+
+div.menu {
+    color: white;
+    font-size: 1.4rem;
+}
+
+.menu span {
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.menu>i {
+    text-align: center;
+    padding: 0.8rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 40px;
+}
+
+.money {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 40px;
+}
+
+.amt {
+    font-size: 1.1rem;
+    margin-left: 1.2rem;
+}
+
+.money>i {
+    margin-left: 0.4rem;
+    background-color: #3ac47d;
+    padding: 0.8rem;
+    border-radius: 30px;
+    
+}
+.menu_bar .fa-bars{
+    display: none;
+   
+}

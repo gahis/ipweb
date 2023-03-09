@@ -1,0 +1,113 @@
+
+
+div.side_bar{
+  width: 80px;
+}
+.side_bar {
+    font-family: 'Montserrat', sans-serif;
+    position: fixed;
+    height: 100%;
+    background-color: #fff;
+    overflow-y: scroll;
+  scrollbar-width: none;
+
+    transition: width 0.5s linear;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+    border-right: 1px solid rgba(0, 0, 0, 0.5);
+    
+  }
+  .side_bar::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+ 
+  .side_bar ul {
+    list-style: none;
+    display: table;
+    margin-top: 5rem;
+    margin-left: 2rem;
+    
+  }
+  
+  .side_bar li {
+    padding: .5rem;
+    width: 250px;
+    display: table;
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+  cursor: pointer;
+  transition: margin 0.5s ease-in-out;
+  }
+  
+  .side_bar i {
+    display: table-cell;
+    width: 30px;
+    text-align: center;
+  }
+  
+  .side_bar li span {
+    margin-left: 1.5rem;
+  }
+  
+  li:has(div.down) {
+    position: relative;
+    overflow: hidden;
+    height: 0px;
+    transition: height 1s linear, margin 0.5s ease-in-out;
+  }
+  
+  .down {
+    font-size: 0.7rem;
+    font-weight: bold;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    border-left: 3px solid rgb(195, 190, 190);
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+    position: absolute;
+  }
+  
+  .down>p {
+    margin-top: 1rem;
+    color: grey;
+    padding: .5rem;
+    cursor: pointer;
+    transition: margin 0.5s ease-in-out;
+  }
+.down>p:hover{
+  background-color: #fff;
+  border-radius: 0.5rem;
+  margin-left: .5rem;
+}
+  li label{
+    cursor: pointer;
+    margin-left: 0.5rem;
+  }
+  input[type="checkbox"]{
+    display: none;
+  }
+  #checkbox_1:checked  ~ ul > li:first-child,  #checkbox_2:checked  ~ ul > li:nth-child(2){
+    height: var(--prog);
+  }
+  #checkbox_1:checked ~ ul >li:first-child > label i.fa , #checkbox_2:checked ~ ul >li:nth-child(2) > label i.fa{
+    transition: transform 0.3s ease-in-out;
+    transform: rotate(180deg); /* set the desired transform */
+  }
+  #checkbox_1 ~ ul >li:first-child label i.fa , #checkbox_2 ~ ul >li:nth-child(2) label i.fa{
+    transform: rotate(0deg);
+    transition: transform 0.3s ease-in-out;
+  }
+  li:hover{
+    background: #f2f4f6;
+    border-radius: 0.5rem;
+    margin-left: 0.8rem;
+  }
+  #bar{
+    display: none;
+  }
+  label[for="bar"]{
+    cursor: pointer;
+  }
+  #bar:checked ~ .side_bar{
+    width: 320px;
+  }

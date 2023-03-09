@@ -1,0 +1,50 @@
+
+@media(width < 768px){
+    /* for mobile devices */
+    .item:last-child{
+        display: none;
+    }
+    div.side_bar{
+        width: 0px;
+      }
+}
+@media (768px <= width <= 992px){
+    /* for tablet  */
+}
+@media (992px <= width < 1200px)
+{
+    /* for desktop maybe 14 inch laptop? */
+    div.item {
+        flex: 1 1 0;
+        min-width: 250px;
+    }
+}
+@media (width >= 1200px){
+    /* for large desktop maybe >= 15.6 inch laptops and pc */
+    div.item {
+        flex: 0 1 0;
+        min-width: 380px;
+    }
+}
+@media (width >= 992px){
+    .menu{
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        
+    }
+    .fa-ellipsis-vertical{
+        display: none;
+    }
+    .nav_container > label{
+        display: none;
+    }
+    .menu_bar > *{
+        vertical-align: middle;
+    }
+    .menu_bar .fa-bars{
+        display: inline-block;
+        margin-left: 7rem;
+       font-size: 1.7rem;
+    }
+}
